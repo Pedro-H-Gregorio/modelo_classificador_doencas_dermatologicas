@@ -12,7 +12,7 @@ from sklearn.svm import SVC, OneClassSVM
 from sklearn.model_selection import GridSearchCV
 from core.pipelines.pipelines import DataPipeline
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, classification_report
+from sklearn.metrics import accuracy_score, classification_report, make_scorer, f1_score, precision_score, recall_score
 
 class GenerateMedicalModel:
     def __init__(self, config: ConfigInterface):
@@ -32,14 +32,24 @@ class GenerateMedicalModel:
         logger.info(f"Gerando model do tipo: {self.config['model']}")
         param_grid = None
         svm = None
+        
         if self.config['model'] == TypeModel.one_class_svm.value:
             param_grid = {
-                'nu': [0.01, 0.05, 0.1],
-                'gamma': [1e-4, 1e-3, 1e-2],
+                'nu': [0.01, 0.05, 0.1, 0.2],
+                'gamma': [1e-4, 1e-3, 1e-2, 1e-1],
                 'kernel': ['rbf']
             }
             svm = OneClassSVM()
-        else : 
+
+            self.model = GridSearchCV(
+                svm, 
+                param_grid, 
+                cv=3,
+                verbose=2, 
+                n_jobs=-1,
+                scoring=None
+            )
+        else:
             param_grid = {
                 'C': [0.1, 1, 10],
                 'gamma': [1e-4, 1e-3, 1e-2],
@@ -47,7 +57,15 @@ class GenerateMedicalModel:
             }
             svm = SVC(probability=True)
 
-        self.model = GridSearchCV(svm, param_grid, cv=5, verbose=2, n_jobs=-1)
+            f1_macro_scorer = make_scorer(f1_score, average='macro', zero_division=0)
+            self.model = GridSearchCV(
+                svm, 
+                param_grid, 
+                cv=5, 
+                verbose=2, 
+                n_jobs=-1,
+                scoring=f1_macro_scorer
+            )
 
     def process(self):
         logger.info("Iniciando o processamento de dados")
