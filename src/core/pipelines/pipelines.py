@@ -14,7 +14,7 @@ class DataPipeline():
         ], memory='./pipeline_cache')
         self.image_pipe = Pipeline([
             ('scaler', StandardScaler()),
-            ('pca', PCA(n_components=1000)),
+            ('pca', PCA(n_components=5000)),
         ], memory='./pipeline_cache')
     
     def pipeline_fit_transform_tabular(self, dataframe: pd.DataFrame) -> np.ndarray:
