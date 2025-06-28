@@ -1,14 +1,16 @@
 import joblib
 import os
+import json
 import numpy as np
 from sklearn.exceptions import NotFittedError
-from core.enums.type_model import TypeModel
 from sklearn.svm import SVC, OneClassSVM
 from core.classes.logger import logger
 from core.pipelines.pipelines import DataPipeline
 from core.utils.load_data_utils import preprocess_input_data
 from core.interfaces.input_interface import InputInterfaceDict
+from core.interfaces.metadate_interface import ModelMetadataInterface
 from core.enums.lession_type_enum import LesionType
+from core.enums.type_model import TypeModel
 from core.config.config import config
 from typing import Union, Optional
 import warnings
@@ -16,7 +18,8 @@ warnings.filterwarnings('ignore')
 
 class DermatologyPredictor:
     
-    def __init__(self, model_path):
+    def __init__(self, model_metadata_path: str):
+        self.metadata_model: Optional[ModelMetadataInterface] = None
         self.model: Union[SVC, OneClassSVM]  = None
         self.model_type: Optional[str] = None
         self.input_combined: np.ndarray = None
@@ -24,51 +27,32 @@ class DermatologyPredictor:
         self.lesion_type = LesionType
         logger.info("Carregando modelos...")
         try:
-            self.model = joblib.load(model_path)
-            self._detect_model_type()
+            self.metadata_model = self._from_json_file(model_metadata_path)
+            self.model_type = self.metadata_model['model_type']
+            self.model = joblib.load(self.metadata_model["model_path"])
             logger.info(f"Modelo carregado com sucesso! Tipo: {self.model_type}")
-
-            pipeline_path = self._find_corresponding_pipeline()
-            if pipeline_path:
-                self.pipeline = joblib.load(pipeline_path)
+            if self.metadata_model["pipeline_path"]:
+                self.pipeline = joblib.load(self.metadata_model["pipeline_path"])
                 logger.info(f"Pipeline carregada com sucesso! Tipo: {self.model_type}")
 
         except FileNotFoundError as e:
             raise FileNotFoundError(f"Arquivo de modelo não encontrado: {e}")
     
-    def _find_corresponding_pipeline(self):
+    def _from_json_file(self, json_path: str) -> ModelMetadataInterface:                 
+        with open(json_path, 'r', encoding='utf-8') as f:             
+            data = json.load(f)         
         
-        try:
-            pipelines_dir = os.path.join(config.PROJECT_ROOT_PATH, "pipelines")
-            pipeline_filename = f"pipeline_{self.model_type}.pkl"
-            pipeline_path = os.path.join(pipelines_dir, pipeline_filename)
-            
-            if os.path.exists(pipeline_path):
-                logger.info(f"Pipeline encontrada: {pipeline_path}")
-                return pipeline_path
-            else:
-                logger.warning(f"Pipeline não encontrada em: {pipeline_path}")
-                return None
-                
-        except Exception as e:
-            logger.error(f"Erro ao buscar pipeline correspondente: {e}")
-            return None
+            return data
 
-    def _detect_model_type(self):
-        
-        if isinstance(self.model, OneClassSVM):
-            self.model_type = TypeModel.one_class_svm.value
-            logger.info("Tipo detectado: OneClassSVM (Detecção de anomalias)")
-        elif isinstance(self.model, SVC):
-            self.model_type = TypeModel.svc.value
-            logger.info("Tipo detectado: SVC")
+    def to_percentage(self,value: float):
+        return f"{value * 100:.2f}%"
 
     def _predict_svc(self) -> tuple:
         logger.info("Executando predição SVC")
         prediction = self.model.predict_proba(self.input_combined)
         predicted_class = self.model.predict(self.input_combined)
     
-        return (prediction[0], self.lesion_type.get_all_value()[predicted_class])
+        return (self.lesion_type.get_all_value()[predicted_class[0]], self.to_percentage(prediction[0][predicted_class[0]]))
     
     def _predict_oneclass(self) -> tuple:
         logger.info("Executando predição OneClassSVM")
@@ -80,15 +64,13 @@ class DermatologyPredictor:
         try:
             decision_score = self.model.decision_function(self.input_combined)[0]
             
-            # Converte para "probabilidade" usando sigmoid
-            # Valores positivos = normal, negativos = anomalia
             probability_normal = 1 / (1 + np.exp(-decision_score))
             probability_anomaly = 1 - probability_normal
             
             if is_normal:
-                return (probability_normal, "normal")
+                return ("normal", self.to_percentage(probability_normal))
             else:
-                return (probability_anomaly, "anormal")
+                return ("anormal", self.to_percentage(probability_anomaly))
 
         except Exception as e:
             logger.warning(f"Não foi possível calcular probabilidades: {e}")
@@ -108,9 +90,9 @@ class DermatologyPredictor:
             raise ValueError("Dados não foram processados. Execute process_data() primeiro.")
 
         try:
-            if self.model_type == "oneclass":
+            if self.model_type == TypeModel.one_class_svm.value:
                 return self._predict_oneclass()
-            else:
+            elif self.model_type == TypeModel.svc.value:
                 return self._predict_svc()
                 
         except NotFittedError as e:

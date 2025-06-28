@@ -6,8 +6,8 @@ from core.classes.logger import logger
 
 class PredictMedicalModel():
 
-    def __init__(self, path_model, input):
-        self.model_predict = DermatologyPredictor(os.path.join(config.PROJECT_ROOT_PATH, path_model))
+    def __init__(self, path_metadata_model, input):
+        self.model_predict = DermatologyPredictor(os.path.join(config.PROJECT_ROOT_PATH, path_metadata_model))
         self.input:InputInterfaceDict  = input
 
     def run(self):
