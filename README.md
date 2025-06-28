@@ -68,7 +68,7 @@ O pipeline irá:
 Use o script main.py para realizar uma predição. Exemplo de uso:
 
 ```bash
-python main.py <model_path> <age> <sex> <localization> <image_path>
+python main.py <metadata_model_path> <age> <sex> <localization> <image_path>
 ```
 
 **Exemplo:**
