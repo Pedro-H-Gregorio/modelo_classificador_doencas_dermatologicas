@@ -12,10 +12,10 @@ venv.bak/
 .venv/
 
 # Input data folder (ignore all contents)
-input/*
-!input/.gitkeep
-**/input/*
-!**/input/.gitkeep
+input_image/*
+!input_image/.gitkeep
+**/input_image/*
+!**/input_image/.gitkeep
 
 # Archive folders
 archive/
