@@ -12,7 +12,7 @@ from sklearn.svm import SVC, OneClassSVM
 from sklearn.model_selection import GridSearchCV
 from core.pipelines.pipelines import DataPipeline
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, classification_report, make_scorer, f1_score, precision_score, recall_score
+from sklearn.metrics import accuracy_score, classification_report
 
 class GenerateMedicalModel:
     def __init__(self, config: ConfigInterface):
@@ -56,15 +56,13 @@ class GenerateMedicalModel:
                 'kernel': ['rbf']
             }
             svm = SVC(probability=True)
-
-            f1_macro_scorer = make_scorer(f1_score, average='macro', zero_division=0)
             self.model = GridSearchCV(
                 svm, 
                 param_grid, 
                 cv=5, 
                 verbose=2, 
                 n_jobs=-1,
-                scoring=f1_macro_scorer
+                scoring="f1_weighted"
             )
 
     def process(self):
