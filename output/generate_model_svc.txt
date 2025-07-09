@@ -1,0 +1,99 @@
+[2025-06-30 18:24:09] [INFO] Iniciando o processamento de dados
+[2025-06-30 18:24:09] [INFO] Lendo arquivos do diretório: /home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/archive
+[2025-06-30 18:24:09] [INFO] Iniciando processamento de Imagens
+[2025-06-30 18:24:09] [INFO] Processadas 0/10015 imagens
+[2025-06-30 18:24:12] [INFO] Processadas 1000/10015 imagens
+[2025-06-30 18:24:16] [INFO] Processadas 2000/10015 imagens
+[2025-06-30 18:24:20] [INFO] Processadas 3000/10015 imagens
+[2025-06-30 18:24:24] [INFO] Processadas 4000/10015 imagens
+[2025-06-30 18:24:28] [INFO] Processadas 5000/10015 imagens
+[2025-06-30 18:24:32] [INFO] Processadas 6000/10015 imagens
+[2025-06-30 18:24:35] [INFO] Processadas 7000/10015 imagens
+[2025-06-30 18:24:39] [INFO] Processadas 8000/10015 imagens
+[2025-06-30 18:24:42] [INFO] Processadas 9000/10015 imagens
+[2025-06-30 18:24:46] [INFO] Processadas 10000/10015 imagens
+[2025-06-30 18:24:46] [INFO] Finalizado processamento de Imagens
+[2025-06-30 18:24:46] [INFO] finalizando o processamento de dados
+[2025-06-30 18:24:46] [INFO] Dividindo dados de treino e teste
+[2025-06-30 18:24:46] [INFO] Dados de treino - Tabular: (9013, 3), Imagem: (9013, 67500)
+[2025-06-30 18:24:46] [INFO] Dados de teste - Tabular: (1002, 3), Imagem: (1002, 67500)
+[2025-06-30 18:24:46] [INFO] Iniciando normalização e transformação de dados
+[2025-06-30 18:24:46] [INFO] Ajustando pipeline tabular...
+[2025-06-30 18:24:46] [INFO] Dados tabulares processados: (9013, 10)
+[2025-06-30 18:24:46] [INFO] Ajustando pipeline de imagens...
+[2025-06-30 18:25:29] [INFO] Dados de imagem processados: (9013, 1000)
+[2025-06-30 18:25:29] [INFO] Dados combinados para treino: (9013, 1010)
+[2025-06-30 18:25:29] [INFO] Dados combinados para teste: (1002, 1010)
+[2025-06-30 18:25:29] [INFO] Finalizada normalização e transformação de dados
+[2025-06-30 18:25:29] [INFO] Gerando model do tipo: svc
+[2025-06-30 18:25:29] [INFO] Iniciando treinamento do modelo
+Fitting 4 folds for each of 9 candidates, totalling 36 fits
+[CV] END ....................C=0.1, gamma=0.0001, kernel=rbf; total time=27.2min
+[CV] END ....................C=0.1, gamma=0.0001, kernel=rbf; total time=27.4min
+[CV] END ......................C=1, gamma=0.0001, kernel=rbf; total time=27.5min
+[CV] END ....................C=0.1, gamma=0.0001, kernel=rbf; total time=27.6min
+[CV] END ......................C=1, gamma=0.0001, kernel=rbf; total time=27.7min
+[CV] END ......................C=1, gamma=0.0001, kernel=rbf; total time=28.2min
+[CV] END ....................C=0.1, gamma=0.0001, kernel=rbf; total time=28.2min
+[CV] END ......................C=1, gamma=0.0001, kernel=rbf; total time=28.9min
+[CV] END .....................C=0.1, gamma=0.001, kernel=rbf; total time=40.3min
+[CV] END .....................C=0.1, gamma=0.001, kernel=rbf; total time=40.5min
+[CV] END .......................C=1, gamma=0.001, kernel=rbf; total time=40.5min
+[CV] END .......................C=1, gamma=0.001, kernel=rbf; total time=40.5min
+[CV] END ......................C=0.1, gamma=0.01, kernel=rbf; total time=40.6min
+[CV] END ......................C=0.1, gamma=0.01, kernel=rbf; total time=40.6min
+[CV] END .....................C=0.1, gamma=0.001, kernel=rbf; total time=40.6min
+[CV] END ......................C=0.1, gamma=0.01, kernel=rbf; total time=40.7min
+[CV] END .......................C=1, gamma=0.001, kernel=rbf; total time=40.7min
+[CV] END .....................C=0.1, gamma=0.001, kernel=rbf; total time=40.7min
+[CV] END ......................C=0.1, gamma=0.01, kernel=rbf; total time=40.8min
+[CV] END .......................C=1, gamma=0.001, kernel=rbf; total time=40.9min
+[CV] END ........................C=1, gamma=0.01, kernel=rbf; total time=41.1min
+[CV] END ........................C=1, gamma=0.01, kernel=rbf; total time=41.2min
+[CV] END ........................C=1, gamma=0.01, kernel=rbf; total time=41.2min
+[CV] END ........................C=1, gamma=0.01, kernel=rbf; total time=41.4min
+[CV] END .....................C=10, gamma=0.0001, kernel=rbf; total time=20.6min
+[CV] END .....................C=10, gamma=0.0001, kernel=rbf; total time=20.8min
+[CV] END .....................C=10, gamma=0.0001, kernel=rbf; total time=20.9min
+[CV] END .....................C=10, gamma=0.0001, kernel=rbf; total time=23.1min
+[CV] END ......................C=10, gamma=0.001, kernel=rbf; total time=23.8min
+[CV] END ......................C=10, gamma=0.001, kernel=rbf; total time=24.4min
+[CV] END ......................C=10, gamma=0.001, kernel=rbf; total time=23.4min
+[CV] END ......................C=10, gamma=0.001, kernel=rbf; total time=24.5min
+[CV] END .......................C=10, gamma=0.01, kernel=rbf; total time=13.8min
+[CV] END .......................C=10, gamma=0.01, kernel=rbf; total time=14.1min
+[CV] END .......................C=10, gamma=0.01, kernel=rbf; total time=14.1min
+[CV] END .......................C=10, gamma=0.01, kernel=rbf; total time=14.3min
+[2025-06-30 19:24:26] [INFO] Treinamento Finalizado
+[2025-06-30 19:24:26] [INFO] Avaliando parametros
+[2025-06-30 19:24:26] [INFO] Melhores parâmetros: {'C': 10, 'gamma': 0.0001, 'kernel': 'rbf'}
+[2025-06-30 19:24:26] [INFO] Melhor validação de pontuação: 0.6226919146064716
+[2025-06-30 19:24:26] [INFO] Avaliando no conjunto de teste
+[2025-06-30 19:24:30] [INFO] Teste de acuracia: 0.717564870259481
+[2025-06-30 19:24:30] [INFO] relatório de classificação
+[2025-06-30 19:24:30] [INFO]               precision    recall  f1-score   support
+
+           0       0.50      0.06      0.11        33
+           1       0.59      0.31      0.41        51
+           2       0.62      0.31      0.41       110
+           3       1.00      0.17      0.29        12
+           4       0.73      0.99      0.84       671
+           5       0.27      0.03      0.05       111
+           6       1.00      0.07      0.13        14
+
+    accuracy                           0.72      1002
+   macro avg       0.67      0.28      0.32      1002
+weighted avg       0.66      0.72      0.64      1002
+
+[2025-06-30 19:24:30] [INFO] Salvando modelo e pipeline...
+[2025-06-30 19:24:30] [INFO] Arquivo de modelo existente removido: /home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/models/dermatology_model_svc.pkl
+[2025-06-30 19:24:30] [INFO] Arquivo de metadados existente removido: /home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/models/metadata_dermatology_model_svc.json
+[2025-06-30 19:24:30] [INFO] Arquivo de pipeline existente removido: /home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/pipelines/pipeline_svc.pkl
+[2025-06-30 19:24:30] [INFO] Salvando modelo em: /home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/models/dermatology_model_svc.pkl
+[2025-06-30 19:24:30] [INFO] Salvando pipeline em: /home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/pipelines/pipeline_svc.pkl
+[2025-06-30 19:24:30] [INFO] Modelo, pipeline e metadados salvos com sucesso!
+[2025-06-30 19:24:30] [INFO] Estrutura de arquivos criada:
+[2025-06-30 19:24:30] [INFO]   /home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/models/
+[2025-06-30 19:24:30] [INFO]     dermatology_model_svc.pkl
+[2025-06-30 19:24:30] [INFO]     metadata_dermatology_model_svc.json
+[2025-06-30 19:24:30] [INFO]   /home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/pipelines/

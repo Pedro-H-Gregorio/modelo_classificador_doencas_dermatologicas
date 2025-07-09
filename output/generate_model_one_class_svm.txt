@@ -1,0 +1,355 @@
+[2025-06-30 18:16:56] [INFO] Iniciando o processamento de dados
+[2025-06-30 18:16:56] [INFO] Lendo arquivos do diretório: /home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/archive
+[2025-06-30 18:16:56] [INFO] Iniciando processamento de Imagens
+[2025-06-30 18:16:56] [INFO] Processadas 0/10015 imagens
+[2025-06-30 18:17:00] [INFO] Processadas 1000/10015 imagens
+[2025-06-30 18:17:04] [INFO] Processadas 2000/10015 imagens
+[2025-06-30 18:17:08] [INFO] Processadas 3000/10015 imagens
+[2025-06-30 18:17:12] [INFO] Processadas 4000/10015 imagens
+[2025-06-30 18:17:15] [INFO] Processadas 5000/10015 imagens
+[2025-06-30 18:17:19] [INFO] Processadas 6000/10015 imagens
+[2025-06-30 18:17:23] [INFO] Processadas 7000/10015 imagens
+[2025-06-30 18:17:27] [INFO] Processadas 8000/10015 imagens
+[2025-06-30 18:17:30] [INFO] Processadas 9000/10015 imagens
+[2025-06-30 18:17:34] [INFO] Processadas 10000/10015 imagens
+[2025-06-30 18:17:34] [INFO] Finalizado processamento de Imagens
+[2025-06-30 18:17:34] [INFO] finalizando o processamento de dados
+[2025-06-30 18:17:34] [INFO] Dividindo dados de treino e teste
+[2025-06-30 18:17:34] [INFO] Dados de treino - Tabular: (9013, 3), Imagem: (9013, 67500)
+[2025-06-30 18:17:34] [INFO] Dados de teste - Tabular: (1002, 3), Imagem: (1002, 67500)
+[2025-06-30 18:17:34] [INFO] Iniciando normalização e transformação de dados
+[2025-06-30 18:17:34] [INFO] Ajustando pipeline tabular...
+[2025-06-30 18:17:34] [INFO] Dados tabulares processados: (9013, 10)
+[2025-06-30 18:17:34] [INFO] Ajustando pipeline de imagens...
+[2025-06-30 18:18:16] [INFO] Dados de imagem processados: (9013, 1000)
+[2025-06-30 18:18:16] [INFO] Dados combinados para treino: (9013, 1010)
+[2025-06-30 18:18:17] [INFO] Dados combinados para teste: (1002, 1010)
+[2025-06-30 18:18:17] [INFO] Finalizada normalização e transformação de dados
+[2025-06-30 18:18:17] [INFO] Gerando model do tipo: one_class_svm
+[2025-06-30 18:18:17] [INFO] Iniciando treinamento do modelo
+Fitting 4 folds for each of 9 candidates, totalling 36 fits
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ..................gamma=0.0001, kernel=rbf, nu=0.05; total time= 1.1min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ..................gamma=0.0001, kernel=rbf, nu=0.05; total time= 1.1min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ..................gamma=0.0001, kernel=rbf, nu=0.05; total time= 1.1min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ..................gamma=0.0001, kernel=rbf, nu=0.05; total time= 1.1min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ...................gamma=0.0001, kernel=rbf, nu=0.1; total time= 1.2min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ...................gamma=0.0001, kernel=rbf, nu=0.1; total time= 1.2min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ...................gamma=0.0001, kernel=rbf, nu=0.1; total time= 1.2min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ...................gamma=0.0001, kernel=rbf, nu=0.1; total time= 1.2min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ..................gamma=0.0001, kernel=rbf, nu=0.01; total time= 1.4min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ..................gamma=0.0001, kernel=rbf, nu=0.01; total time= 1.4min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ..................gamma=0.0001, kernel=rbf, nu=0.01; total time= 1.4min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ..................gamma=0.0001, kernel=rbf, nu=0.01; total time= 1.5min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ...................gamma=0.001, kernel=rbf, nu=0.01; total time= 2.3min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ...................gamma=0.001, kernel=rbf, nu=0.01; total time= 2.3min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ...................gamma=0.001, kernel=rbf, nu=0.05; total time= 2.3min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ...................gamma=0.001, kernel=rbf, nu=0.05; total time= 2.3min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ....................gamma=0.001, kernel=rbf, nu=0.1; total time= 2.3min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ...................gamma=0.001, kernel=rbf, nu=0.05; total time= 2.3min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ....................gamma=0.001, kernel=rbf, nu=0.1; total time= 2.3min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ...................gamma=0.001, kernel=rbf, nu=0.01; total time= 2.3min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ....................gamma=0.001, kernel=rbf, nu=0.1; total time= 2.3min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ...................gamma=0.001, kernel=rbf, nu=0.05; total time= 2.3min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ...................gamma=0.001, kernel=rbf, nu=0.01; total time= 2.3min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ....................gamma=0.001, kernel=rbf, nu=0.1; total time= 2.3min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ....................gamma=0.01, kernel=rbf, nu=0.01; total time= 1.7min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ....................gamma=0.01, kernel=rbf, nu=0.01; total time= 1.7min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ....................gamma=0.01, kernel=rbf, nu=0.05; total time= 1.6min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ....................gamma=0.01, kernel=rbf, nu=0.01; total time= 1.7min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ....................gamma=0.01, kernel=rbf, nu=0.01; total time= 1.7min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ....................gamma=0.01, kernel=rbf, nu=0.05; total time= 1.6min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ....................gamma=0.01, kernel=rbf, nu=0.05; total time= 1.7min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END .....................gamma=0.01, kernel=rbf, nu=0.1; total time= 1.4min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END .....................gamma=0.01, kernel=rbf, nu=0.1; total time= 1.4min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END ....................gamma=0.01, kernel=rbf, nu=0.05; total time= 1.7min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END .....................gamma=0.01, kernel=rbf, nu=0.1; total time= 1.5min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:953: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 940, in _score
+    scores = scorer(estimator, X_test, **score_params)
+TypeError: _BaseScorer.__call__() missing 1 required positional argument: 'y_true'
+
+  warnings.warn(
+[CV] END .....................gamma=0.01, kernel=rbf, nu=0.1; total time= 1.5min
+/home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/venv/lib/python3.10/site-packages/sklearn/model_selection/_search.py:1135: UserWarning: One or more of the test scores are non-finite: [nan nan nan nan nan nan nan nan nan]
+  warnings.warn(
+[2025-06-30 18:21:22] [INFO] Treinamento Finalizado
+[2025-06-30 18:21:22] [INFO] Avaliando parametros
+[2025-06-30 18:21:22] [INFO] Melhores parâmetros: {'gamma': 0.0001, 'kernel': 'rbf', 'nu': 0.01}
+[2025-06-30 18:21:22] [INFO] Melhor validação de pontuação: nan
+[2025-06-30 18:21:22] [INFO] Avaliando no conjunto de teste
+[2025-06-30 18:21:23] [INFO] Teste de acuracia: 0.027944111776447105
+[2025-06-30 18:21:23] [INFO] relatório de classificação
+[2025-06-30 18:21:23] [INFO]               precision    recall  f1-score   support
+
+          -1       0.00      0.00      0.00         0
+           0       0.00      0.00      0.00        33
+           1       0.05      0.55      0.09        51
+           2       0.00      0.00      0.00       110
+           3       0.00      0.00      0.00        12
+           4       0.00      0.00      0.00       671
+           5       0.00      0.00      0.00       111
+           6       0.00      0.00      0.00        14
+
+    accuracy                           0.03      1002
+   macro avg       0.01      0.07      0.01      1002
+weighted avg       0.00      0.03      0.00      1002
+
+[2025-06-30 18:21:23] [INFO] Salvando modelo e pipeline...
+[2025-06-30 18:21:23] [INFO] Arquivo de modelo existente removido: /home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/models/dermatology_model_one_class_svm.pkl
+[2025-06-30 18:21:23] [INFO] Arquivo de metadados existente removido: /home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/models/metadata_dermatology_model_one_class_svm.json
+[2025-06-30 18:21:23] [INFO] Arquivo de pipeline existente removido: /home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/pipelines/pipeline_one_class_svm.pkl
+[2025-06-30 18:21:23] [INFO] Salvando modelo em: /home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/models/dermatology_model_one_class_svm.pkl
+[2025-06-30 18:21:23] [INFO] Salvando pipeline em: /home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/pipelines/pipeline_one_class_svm.pkl
+[2025-06-30 18:21:23] [INFO] Modelo, pipeline e metadados salvos com sucesso!
+[2025-06-30 18:21:23] [INFO] Estrutura de arquivos criada:
+[2025-06-30 18:21:23] [INFO]   /home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/models/
+[2025-06-30 18:21:23] [INFO]     dermatology_model_one_class_svm.pkl
+[2025-06-30 18:21:23] [INFO]     metadata_dermatology_model_one_class_svm.json
+[2025-06-30 18:21:23] [INFO]   /home/pedro-gregorio/Documentos/pedro/ia-projetos/modelo_classificador_doencas_dermatologicas/pipelines/
+[2025-06-30 18:21:23] [INFO]     pipeline_one_class_svm.pkl

@@ -1,0 +1,11 @@
+[2025-06-30 12:35:50] [INFO] Carregando modelos...
+[2025-06-30 12:35:50] [INFO] Modelo carregado com sucesso! Tipo: one_class_svm
+[2025-06-30 12:35:50] [INFO] Pipeline carregada com sucesso! Tipo: one_class_svm
+[2025-06-30 12:35:50] [INFO] Iniciando fluxo de predição
+[2025-06-30 12:35:50] [INFO] Iniciando processamento de input
+[2025-06-30 12:35:50] [INFO] Dados combinados para input: (1, 5010)
+[2025-06-30 12:35:50] [INFO] Finalizada normalização e transformação de dados
+[2025-06-30 12:35:50] [INFO] Executando predição OneClassSVM
+[2025-06-30 12:35:51] [INFO] RESULTADO DA PREDIÇÃO
+[2025-06-30 12:35:51] [INFO] A predição é que seja anormal
+[2025-06-30 12:35:51] [INFO] Probabilidade da predição 51.03%

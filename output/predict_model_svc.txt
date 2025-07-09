@@ -1,0 +1,11 @@
+[2025-06-30 12:37:16] [INFO] Carregando modelos...
+[2025-06-30 12:37:16] [INFO] Modelo carregado com sucesso! Tipo: svc
+[2025-06-30 12:37:16] [INFO] Pipeline carregada com sucesso! Tipo: svc
+[2025-06-30 12:37:16] [INFO] Iniciando fluxo de predição
+[2025-06-30 12:37:16] [INFO] Iniciando processamento de input
+[2025-06-30 12:37:16] [INFO] Dados combinados para input: (1, 1010)
+[2025-06-30 12:37:16] [INFO] Finalizada normalização e transformação de dados
+[2025-06-30 12:37:16] [INFO] Executando predição SVC
+[2025-06-30 12:37:16] [INFO] RESULTADO DA PREDIÇÃO
+[2025-06-30 12:37:16] [INFO] A predição é que seja Vascular lesions
+[2025-06-30 12:37:16] [INFO] Probabilidade da predição 94.05%

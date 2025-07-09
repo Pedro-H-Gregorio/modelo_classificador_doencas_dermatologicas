@@ -13,6 +13,8 @@ from sklearn.model_selection import GridSearchCV
 from core.pipelines.pipelines import DataPipeline
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
+import warnings
+warnings.filterwarnings('ignore')
 
 class GenerateMedicalModel:
     def __init__(self, config: ConfigInterface):
@@ -35,20 +37,12 @@ class GenerateMedicalModel:
         
         if self.config['model'] == TypeModel.one_class_svm.value:
             param_grid = {
-                'nu': [0.01, 0.05, 0.1, 0.2],
-                'gamma': [1e-4, 1e-3, 1e-2, 1e-1],
+                'nu': [0.01, 0.05, 0.1],
+                'gamma': [1e-4, 1e-3, 1e-2],
                 'kernel': ['rbf']
             }
             svm = OneClassSVM()
 
-            self.model = GridSearchCV(
-                svm, 
-                param_grid, 
-                cv=3,
-                verbose=2, 
-                n_jobs=-1,
-                scoring=None
-            )
         else:
             param_grid = {
                 'C': [0.1, 1, 10],
@@ -56,14 +50,16 @@ class GenerateMedicalModel:
                 'kernel': ['rbf']
             }
             svm = SVC(probability=True)
-            self.model = GridSearchCV(
+        
+        self.model = GridSearchCV(
                 svm, 
                 param_grid, 
-                cv=5, 
+                cv=4, 
                 verbose=2, 
                 n_jobs=-1,
                 scoring="f1_weighted"
             )
+            
 
     def process(self):
         logger.info("Iniciando o processamento de dados")
